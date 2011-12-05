@@ -1,0 +1,4 @@
+	var cm = {"dataDomain":"dc.rackspace.com","clientID":"90378805;90378974","cookieDomain":"rackspace.com","rackuid":"USba8e2ed47c6d33b70dd74a6a7fd29910","pageID":"rackspace.com:knowledge_center:how_can_i_access_my_ftp_content_with_sshfs","pageCatID":"R138"}; 
+
+	document.write('<scr'+'ipt type="text/javascript" src="' + document.location.protocol + '//' + 
+		'www.rackspace.com/min/?f=script/analytics/addtags.js"></scr'+'ipt>');

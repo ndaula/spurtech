@@ -1,0 +1,6 @@
+/*
+ jQuery Suspend plugin v.0.2
+ Copyright 2010, Fedor Indutny
+*/
+(function(){function h(c){if(c.suspended_originalMethod)return h(c.suspended_originalMethod);return c}var d={};jQuery.suspend=jQuery.fn.suspend=function(c,a){var b=this,e;if(!b.suspended_timers)b.suspended_timers=[];for(e in b)typeof b[e]==="function"&&e!=="suspend"&&e!=="resume"&&function(f){var g=b[f];b[f]=function(){var i=arguments;b.suspended_timers[b.suspended_timers.length]=setTimeout(function(){g.apply(b,i);g=undefined},c);if(a){d[a]=d[a]||[];d[a][d[a].length]=b.suspended_timers[b.suspended_timers.length-
+1]}return b};b[f].suspended_originalMethod=g}(e);setTimeout(function(){b.resume()},0);return b};jQuery.resume=jQuery.fn.resume=function(c){var a;if(typeof c==="string"&&d[c]&&d[c].length){for(a in d[c])clearTimeout(d[c][a]);d[c]=[];return this}for(a in this)if(typeof this[a]==="function")if(this[a].suspended_originalMethod)this[a]=h(this[a]);if(c&&this.suspended_timers&&this.suspended_timers instanceof Array){for(a in this.suspended_timers)clearTimeout(this.suspended_timers[a]);this.suspended_timers=[]}return this}})();

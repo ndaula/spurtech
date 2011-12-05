@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="js" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en"><head><link media="all" href="How_can_I_access_my_FTP_content_with_SSHFS_files/widget69.css" type="text/css" rel="stylesheet">
+
+	<title>How can I access my FTP content with SSHFS? | Cloud Computing and Web Hosting Knowledge Center by Rackspace</title>
+
+	<meta http-equiv="content-language" content="en-US">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+	<meta name="copyright" content="©2011 Rackspace US, Inc.">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="verify-v1" content="enuqjdcvOhaVEfxp3z4w3xL72s1SNBhvGNF5ieeY5i4=">
+	<meta name="msvalidate.01" content="03BF7B4D834C302AABC7817095A1DEDE">
+	
+			
+		<!-- NOFOLLOW if Knowledge Center -->
+		<meta name="robots" content="noindex, nofollow">			
+		
+	
+	<meta property="og:title" content="How can I access my FTP content with SSHFS? | Cloud Computing and Web Hosting Knowledge Center by Rackspace">
+	<meta property="og:description" content="">
+	<meta property="og:type" content="company">
+	<meta property="og:image" content="http://c1776742.cdn.cloudfiles.rackspacecloud.com/images/elements/icon.png">
+	<meta property="og:url" content="http://www.rackspace.com">
+	<meta property="og:site_name" content="Rackspace Hosting">
+
+			<link rel="image_src" href="http://c1776742.cdn.cloudfiles.rackspacecloud.com/images/elements/icon.png">
+		
+	<link rel="alternate" type="application/rss+xml" title="ROR" href="http://broadcast.rackspace.com/ror.xml">
+	
+		
+		
+<script language="javascript" type="text/javascript">
+
+var altid = "USba8e2ed47c6d33b70dd74a6a7fd29910";
+
+</script>
+    	<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/a_002.js"></script>    	<link rel="stylesheet" type="text/css" href="How_can_I_access_my_FTP_content_with_SSHFS_files/a.css">    	
+    	<!-- Print knowledge center styles and scripts --><style type="text/css" media="all">@import url("http://www.rackspace.com/knowledge_center/modules/system/system.base.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/system/system.menus.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/system/system.messages.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/system/system.theme.css?lve34p");</style>
+<style type="text/css" media="all">@import url("http://www.rackspace.com/knowledge_center/modules/book/book.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/comment/comment.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/sites/rackspace.com.knowledge_center/modules/custom/contactblock/css/contactblock.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/field/theme/field.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/sites/all/modules/mollom/mollom.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/node/node.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/search/search.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/user/user.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/sites/all/modules/views/css/views.css?lve34p");</style>
+<style type="text/css" media="all">@import url("http://www.rackspace.com/knowledge_center/sites/all/modules/ctools/css/ctools.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/sites/rackspace.com.knowledge_center/modules/rate/rate.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/sites/rackspace.com.knowledge_center/modules/addthis/addthis.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/sites/rackspace.com.knowledge_center/modules/rate/templates/fivestar/fivestar.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/sites/all/modules/wysiwyg/editors/css/tinymce-3.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/modules/filter/filter.css?lve34p");</style>
+<style type="text/css" media="all">@import url("http://www.rackspace.com/knowledge_center/sites/rackspace.com.knowledge_center/themes/knowledgecenter1.0/css/rackspace_kc_elements.css?lve34p");
+@import url("http://www.rackspace.com/knowledge_center/sites/rackspace.com.knowledge_center/themes/knowledgecenter1.0/css/rackspace_kc_templates.css?lve34p");</style>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/jquery.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/knowledge_center/sites/all/modules/jquery_update/replace/jquery/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/jquery_003.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/drupal.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/jquery_004.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/wysiwyg.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/form.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/mollom.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+	    addthis_pub = 'my-username';
+	    addthis_logo = 'http://www.addthis.com/images/yourlogo.png';
+	    addthis_logo_background = 'EFEFFF';
+	    addthis_logo_color = '666699';
+	    addthis_brand = '';
+	    addthis_options = 'favorites, email, digg, delicious, myspace, facebook, google, live, more';
+	    addthis_disable_flash = 'true';
+	
+//--><!]]>
+</script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/rate.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/fivestar.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/collapse.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/tiny_mce.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/textarea.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/tinymce-3.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/none.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/filter.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/jquery_005.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/flowplayer-3.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/jquery_002.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/jquery_006.js"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/smartbutton.html"></script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/liveChat.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/knowledge_center\/","pathPrefix":"","ajaxPageState":{"theme":"knowledgecenter","theme_token":"2gnFbiF5D-o062TF30al4zm2grg9jSUxXkOqcNc0CU8","js":{"sites\/all\/modules\/wysiwyg\/wysiwyg.js":1,"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.5.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/wysiwyg\/wysiwyg.init.js":1,"misc\/form.js":1,"sites\/all\/modules\/mollom\/mollom.js":1,"1":1,"sites\/rackspace.com.knowledge_center\/modules\/rate\/rate.js":1,"sites\/rackspace.com.knowledge_center\/modules\/rate\/templates\/fivestar\/fivestar.js":1,"misc\/collapse.js":1,"sites\/all\/libraries\/tinymce\/jscripts\/tiny_mce\/tiny_mce.js":1,"misc\/textarea.js":1,"sites\/all\/modules\/wysiwyg\/editors\/js\/tinymce-3.js":1,"sites\/all\/modules\/wysiwyg\/editors\/js\/none.js":1,"modules\/filter\/filter.js":1,"sites\/rackspace.com.knowledge_center\/themes\/knowledgecenter1.0\/scripts\/jquery.styling.js":1,"sites\/rackspace.com.knowledge_center\/themes\/knowledgecenter1.0\/scripts\/flowplayer-3.2.6.min.js":1,"sites\/rackspace.com.knowledge_center\/themes\/knowledgecenter1.0\/scripts\/jquery.hoverintent.min.js":1,"sites\/rackspace.com.knowledge_center\/themes\/knowledgecenter1.0\/scripts\/jquery.suspend.min.js":1,"sites\/rackspace.com.knowledge_center\/themes\/knowledgecenter1.0\/templates\/includes\/instantservice\/smartbutton.js":1,"sites\/rackspace.com.knowledge_center\/themes\/knowledgecenter1.0\/scripts\/liveChat.js":1,"2":1,"3":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/rackspace.com.knowledge_center\/modules\/custom\/contactblock\/css\/contactblock.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/rackspace.com.knowledge_center\/modules\/rate\/rate.css":1,"sites\/rackspace.com.knowledge_center\/modules\/addthis\/addthis.css":1,"sites\/rackspace.com.knowledge_center\/modules\/rate\/templates\/fivestar\/fivestar.css":1,"sites\/all\/modules\/wysiwyg\/editors\/css\/tinymce-3.css":1,"modules\/filter\/filter.css":1,"sites\/rackspace.com.knowledge_center\/themes\/knowledgecenter1.0\/css\/rackspace_kc_elements.css":1,"sites\/rackspace.com.knowledge_center\/themes\/knowledgecenter1.0\/css\/rackspace_kc_templates.css":1}},"wysiwyg":{"configs":{"tinymce":{"global":{"editorBasePath":"\/knowledge_center\/sites\/all\/libraries\/tinymce\/jscripts\/tiny_mce","execMode":""},"formatfiltered_html":{"button_tile_map":true,"document_base_url":"\/knowledge_center\/","mode":"none","plugins":"","theme":"advanced","width":"100%","strict_loading_mode":true,"convert_urls":false,"entities":"160,nbsp,173,shy,8194,ensp,8195,emsp,8201,thinsp,8204,zwnj,8205,zwj,8206,lrm,8207,rlm","theme_advanced_resize_horizontal":false,"theme_advanced_resizing_use_cookie":false,"theme_advanced_path_location":"bottom","theme_advanced_resizing":1,"theme_advanced_toolbar_location":"top","theme_advanced_toolbar_align":"left","theme_advanced_buttons1":"","theme_advanced_buttons2":"","theme_advanced_buttons3":""},"formatplain_text":{"button_tile_map":true,"document_base_url":"\/knowledge_center\/","mode":"none","plugins":"","theme":"advanced","width":"100%","strict_loading_mode":true,"convert_urls":false,"entities":"160,nbsp,173,shy,8194,ensp,8195,emsp,8201,thinsp,8204,zwnj,8205,zwj,8206,lrm,8207,rlm","theme_advanced_resize_horizontal":false,"theme_advanced_resizing_use_cookie":false,"theme_advanced_path_location":"bottom","theme_advanced_resizing":1,"theme_advanced_toolbar_location":"top","theme_advanced_toolbar_align":"left","theme_advanced_buttons1":"","theme_advanced_buttons2":"","theme_advanced_buttons3":""}}},"plugins":[],"disable":"Disable rich-text","enable":"Enable rich-text","triggers":{"edit-comment-body-und-0-format--2":{"field":"edit-comment-body-und-0-value","formatfiltered_html":{"editor":"tinymce","status":1,"toggle":1,"resizable":1},"formatplain_text":{"editor":"tinymce","status":1,"toggle":1,"resizable":1}}}}});
+//--><!]]>
+</script>
+
+		
+
+		
+		
+	<script src="How_can_I_access_my_FTP_content_with_SSHFS_files/jsapi" type="text/javascript"></script>
+
+	<script src="How_can_I_access_my_FTP_content_with_SSHFS_files/eluminate.js" type="text/javascript"></script>
+
+</head>
+
+<body class="firefox"><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe class="mp4downloader_tagChecked " src="How_can_I_access_my_FTP_content_with_SSHFS_files/sh60.html" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0pt none; left: 0pt; top: 0pt;" title="AddThis utility frame" id="_atssh893"></iframe></div>
+
+<div id="page-darken-wrap"></div>
+
+
+
+	
+
+<div id="page-wrap">
+
+	<div id="ceiling-wrap">
+	
+		<div class="container_12" id="pocket-container">
+		
+			<div id="pocket-wrap">
+			
+							
+				<div id="pocket-salesnumber" class="pocketitem">
+					<div class="icon"></div>
+					<div class="content"><span class="pocketitem-gray">Sales:</span> 1-800-961-2888</div></div>
+				
+				<div id="pocket-supportnumber" class="pocketitem">
+					<a href="http://www.rackspace.com/support/"><div class="icon"></div></a>
+					<div class="content"><a href="http://www.rackspace.com/support/"><span class="pocketitem-gray">Support:</span></a> 1-800-961-4454</div></div>
+
+				<div id="pocket-customerlogin" class="pocketitem">
+					<div class="pocketitemButton">Login
+						<div class="side left"></div>
+						<div class="side right"></div>
+						<div class="arrow"></div>
+					
+						<ul>
+							<li onclick="getURL('https://my.rackspace.com');">MyRackspace Portal</li>
+							<li onclick="getURL('https://manage.rackspacecloud.com');">Cloud Control Panel</li>
+							<li onclick="getURL('https://apps.rackspace.com');">Rackspace Webmail Login</li>
+						</ul>
+						
+						</div></div>
+				
+				<div id="pocket-countryselect" class="pocketitem">
+					<div class="pocketitemButton">
+						
+						<div class="country usa"></div>
+						<div class="side left"></div>
+						<div class="side right"></div>
+						<div class="arrow"></div>
+
+						<ul><li><div class="country uk"></div><a href="http://www.rackspace.co.uk/?CMP=US">United Kingdom</a></li><li><div class="country australia"></div><a href="http://www.rackspace.com.au/?CMP=US">Australia</a></li><li><div class="country belgium"></div><a href="http://www.rackspace.nl/?CMP=US">Belgium</a></li><li><div class="country denmark"></div><a href="http://www.rackspace.dk/?CMP=US">Denmark</a></li><li><div class="country germany"></div><a href="http://www.rackspace-hosting.de/?CMP=US">Germany</a></li><li><div class="country hk"></div><a href="http://www.rackspace.com.hk/?CMP=US">Hong Kong</a></li><li><div class="country netherlands"></div><a href="http://www.rackspace.nl/?CMP=US">Netherlands</a></li><li><div class="country nz"></div><a href="http://www.rackspacehosting.co.nz/?CMP=US">New Zealand</a></li><li><div class="country norway"></div><a href="http://www.rackspacehosting.no/?CMP=US">Norway</a></li><li><div class="country sa"></div><a href="http://www.rackspace.co.za/?CMP=US">South Africa</a></li><li><div class="country sweden"></div><a href="http://www.rackspacehosting.se/?CMP=US">Sweden</a></li><li><div class="country uae"></div><a href="http://www.rackspace.ae/?CMP=US">United Arab Emirates</a></li></ul>
+						
+						</div></div>
+
+				<div class="clear"></div>
+			
+			</div>
+		
+		</div>
+			
+		<div id="navigation-wrap">
+		
+			<div id="logo-wrap" onclick="getURL('/')"></div>
+			
+			<div id="menu-wrap"><div class="menuoption" id="menuoption-hostingsolutions"><a href="http://www.rackspace.com/hosting_solutions/" class="menuoption menuoption-off">Hosting Solutions<div class="arrow"></div></a><div style="display: none; left: -190px;" class="menu" id="menu-hostingsolutions"><div class="container_12"><div class="navigation_1"><div class="menu-title">Hosting Solutions</div><br><br></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/hosting_solutions/">Solutions</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/hosting_solutions/websites/">Corporate Websites</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/hosting_solutions/ecommerce/">Ecommerce Websites</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/hosting_solutions/richmedia/">Rich Media Websites</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/hosting_solutions/saas/">SaaS Applications</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/testdev/">Test &amp; Development Environments</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/enterprise_hosting/">Enterprise Business Solutions</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/enterprise_hosting/advisory_services/">Advisory Services</a><div class="clear"></div></li></ul></div><div style="height: 403px;" class="grid_divider_vertical"><div class="top part"></div><div style="height: 113px;" class="middle part"></div><div class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/hosting_solutions/">Technologies</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/">Cloud Hosting</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/cloud/cloud_hosting_products/servers/">Cloud Servers™</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/cloud/managed_cloud/">Cloud Servers™ - Managed</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/cloud/cloud_hosting_products/loadbalancers/">Cloud Load Balancers</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/cloud/cloud_hosting_products/sites/">Cloud Sites™</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/cloud/cloud_hosting_products/files/">Cloud Files™</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/cloud/cloud_hosting_products/dns/">Cloud DNS</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/cloud/private_edition/">Cloud Private Edition</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/">Managed Hosting</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/managed_hosting/configurations/">Managed Server Configurations</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/managed_hosting/private_cloud/">Private Clouds</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/managed_hosting/managed_colocation/">Managed Colocation Servers</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/managed_hosting/services/proservices/criticalsites/">Rackspace Critical Sites</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/hosting_solutions/hybrid_hosting/">Hybrid Hosting</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/hosting_solutions/hybrid_hosting/rackconnect/">RackConnect™</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps">Email &amp; Apps</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/email_hosting/rackspace_email/">Rackspace Email</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/email_hosting/exchange_hosting/">Microsoft Exchange</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/file_sharing/">File Sharing</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/backup_and_collaboration/">Backup &amp; Collaboration</a><div class="clear"></div></li></ul></div><div style="height: 403px;" class="grid_divider_vertical"><div class="top part"></div><div style="height: 113px;" class="middle part"></div><div class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/cloud/private_edition/">Cloud Builders</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/private_edition/">Cloud Private Edition</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/private_edition/openstack/">About OpenStack™</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/private_edition/support/">OpenStack™ Training</a><div class="clear"></div></li></ul></div><div class="clear"></div></div></div></div><div class="menuoption" id="menuoption-cloud"><a href="http://www.rackspace.com/cloud/" class="menuoption menuoption-off">Cloud Hosting<div class="arrow"></div></a><div style="display: none; left: -190px;" class="menu" id="menu-cloud"><div class="container_12"><div class="navigation_1"><div class="menu-title">Cloud Hosting</div><br><br><div class="rsOrderButton horizontal" url="https://cart.rackspace.com/cloud/"><a href="https://cart.rackspace.com/cloud/"><div class="side left"></div><div class="middle"><div class="shopping-cart"></div>Order Now</div><div class="side right"></div><div class="clear"></div></a></div><div class="rsSupport" onclick='getURL("/support/")'>Help &amp; Support</div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/cloud/cloud_hosting_products/">Cloud Products</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloud_hosting_products/">Overview</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloud_hosting_products/servers/">Cloud Servers™</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/managed_cloud/">Cloud Servers™ - Managed</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloud_hosting_products/loadbalancers/">Cloud Load Balancers</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloud_hosting_products/sites/">Cloud Sites™</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloud_hosting_products/files/">Cloud Files™</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloud_hosting_products/dns/">Cloud DNS</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/private_edition/">Cloud Private Edition</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/partners/">Partner Program</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/partners/">Program Overview</a><div class="clear"></div></li><li class=""><a href="https://affiliates.rackspacecloud.com/">Cloud Affiliates</a><div class="clear"></div></li></ul></div><div style="height: 266px;" class="grid_divider_vertical"><div style="height: 133px;" class="top part"></div><div style="display: none;" class="middle part"></div><div style="height: 133px; background-position: -48px -12px;" class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/cloud/cloud_hosting_faq/">Learn More</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloud_hosting_faq/">Cloud FAQ</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/who_uses_cloud_computing/">Cloud Customers</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/what_is_cloud_computing/">Cloud Computing?</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloudU/">Cloud University</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/cloud_hosting_demos/">Cloud Demos</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/knowledge_center/">Knowledge Center</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/cloud/tools/">Cloud Tools</a><div class="arrow"></div><div class="clear"></div></li></ul></div><div style="height: 266px;" class="grid_divider_vertical"><div style="height: 133px;" class="top part"></div><div style="display: none;" class="middle part"></div><div style="height: 133px; background-position: -48px -12px;" class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/cloud/aboutus/story/">About</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/aboutus/story/">Our Story</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/aboutus/contact/">Contact Us</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/newsroom/">Media</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/aboutus/events/">Events</a><div class="clear"></div></li><li class=""><a href="http://www.rackertalent.com/">Jobs</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/links/">Link to Us</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/legal/">Legal</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/cloud/blog/">Blog</a><div class="arrow"></div><div class="clear"></div></li></ul></div><div class="clear"></div></div></div></div><div class="menuoption" id="menuoption-managed"><a href="http://www.rackspace.com/managed_hosting/" class="menuoption menuoption-off">Managed Hosting<div class="arrow"></div></a><div style="display: none; left: -190px;" class="menu" id="menu-managed"><div class="container_12"><div class="navigation_1"><div class="menu-title">Managed Hosting</div><br><br><div class="rsOrderButton horizontal" url="/managed_hosting/configurations/"><a href="http://www.rackspace.com/managed_hosting/configurations/"><div class="side left"></div><div class="middle"><div class="shopping-cart"></div>Order Now</div><div class="side right"></div><div class="clear"></div></a></div><div class="rsSupport" onclick='getURL("/support/")'>Help &amp; Support</div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/managed_hosting/">Managed Solutions</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/private_cloud/">Managed Private Clouds</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/managed_colocation/">Managed Colocation</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/configurations/">Managed Server Configurations</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/partners/">Partner Program</a><div class="arrow"></div><div class="clear"></div></li></ul></div><div style="height: 222px;" class="grid_divider_vertical"><div style="height: 111px;" class="top part"></div><div style="display: none;" class="middle part"></div><div style="height: 111px; background-position: -48px -34px;" class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/managed_hosting/dedicated_servers/">Compare Managed</a><div class="arrow"></div><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/managed_hosting/support/">Support Experience</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/support/dedicatedteam/">Dedicated Support Teams</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/support/promise/">The Fanatical Support Promise<sup>®</sup></a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/support/customers/">Our Customers</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/support/servicelevels/">Managed Service Levels</a><div class="clear"></div></li></ul></div><div style="height: 222px;" class="grid_divider_vertical"><div style="height: 111px;" class="top part"></div><div style="display: none;" class="middle part"></div><div style="height: 111px; background-position: -48px -34px;" class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/managed_hosting/services/">Managed Services</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/services/security/">Managed Security</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/services/storage/">Managed Storage</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/services/database/">Managed Databases</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/services/proservices/sharepoint/">Dedicated Microsoft<sup>®</sup> SharePoint</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/services/proservices/criticalsites/">Rackspace Critical Sites</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/managed_hosting/services/proservices/disasterrecovery/">Disaster Recovery Services</a><div class="clear"></div></li></ul></div><div class="clear"></div></div></div></div><div class="menuoption" id="menuoption-email"><a href="http://www.rackspace.com/apps" class="menuoption menuoption-off">Email &amp; Apps<div class="arrow"></div></a><div style="display: none; left: -190px;" class="menu" id="menu-email"><div class="container_12"><div class="navigation_1"><div class="menu-title">Email &amp; Apps</div><br><br><div class="rsOrderButton horizontal" url="https://signup.apps.rackspace.com"><a href="https://signup.apps.rackspace.com/"><div class="side left"></div><div class="middle"><div class="shopping-cart"></div>Order Now</div><div class="side right"></div><div class="clear"></div></a></div><div class="rsSupport" onclick='getURL("/apps/support/")'>Email Help &amp; Support</div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/apps">Our Apps</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_hosting/">Email Hosting</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/email_hosting/rackspace_email/">Rackspace Email</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/email_hosting/exchange_hosting/">Microsoft Exchange</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/email_hosting/exchange_hybrid/">Exchange Hybrid</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/file_sharing/">File Sharing</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/file_sharing/hosted_sharepoint/">Microsoft SharePoint</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/backup_and_collaboration/">Backup &amp; Collaboration</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/backup_and_collaboration/online_file_storage/">Rackspace Cloud Drive</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/backup_and_collaboration/data_backup_software/">Rackspace Server Backup</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/apps/email_hosting/email_archiving/">Email Archiving</a><div class="clear"></div></li><li class="heading-label">Admin Tools<div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/control_panel/">Control Panel</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_hosting/migrations/">Migrations App</a><div class="clear"></div></li></ul></div><div style="height: 300px;" class="grid_divider_vertical"><div class="top part"></div><div style="height: 10px;" class="middle part"></div><div class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-label">Mobile Options<div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_hosting/rackspace_email/on_your_mobile/">For Rackspace Email</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_hosting/exchange_hosting/on_your_mobile/">For Microsoft Exchange</a><div class="clear"></div></li><li class="heading-label">Email Extras<div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_hosting/compare/">Compare Products</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_marketing_solutions/">Email Marketing</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/apps/why_hosted_apps/">Why Rack Apps</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/why_hosted_apps/">Top 10 Reasons</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/fanatical_support/">Fanatical Support</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_industry_leadership/">History &amp; Expertise</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/customers/">Customer Case Studies</a><div class="clear"></div></li></ul></div><div style="height: 300px;" class="grid_divider_vertical"><div class="top part"></div><div style="height: 10px;" class="middle part"></div><div class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-label">Considering a Switch?<div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_hosting_service_planning_guide/">Get Your Business Ready</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_provider/">Select Your Provider</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/email_hosting/migrations/">Migrate Your Data</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/apps/contact_us/">Connect With Us</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/contact_us/">Contact Us</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/blog/">Blog</a><div class="clear"></div></li><li class=""><a href="http://feedback.rackspacecloud.com/">Product Feedback</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/careers/">Careers</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/partners/">Partner Program</a><div class="arrow"></div><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/apps/support/">Help &amp; Support</a><div class="arrow"></div><div class="clear"></div></li></ul></div><div class="clear"></div></div></div></div><div class="menuoption" id="menuoption-rackspace"><a href="http://www.rackspace.com/" class="menuoption menuoption-off">Company<div class="arrow"></div></a><div style="display: none; left: -190px;" class="menu" id="menu-rackspace"><div class="container_12"><div class="navigation_1"><div class="menu-title">About the Company</div><br><br></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/whyrackspace/">Why Rackspace</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/whyrackspace/support/">Fanatical Support®</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/whyrackspace/network/">Our Network</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/whyrackspace/network/datacenters/">Our Data Centers</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/whyrackspace/network/ipv6/">IPv6 Deployment &amp; Readiness</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/whyrackspace/expertise/">Awards &amp; Expertise</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/partners/">Partner Program</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/partners/">Program Overview</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/forms/partnerapplication/">Partner Application</a><div class="clear"></div></li><li class=""><a href="http://rackspacepartner.force.com/us">Partner Portal Login</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/partners/partnersearch/">Partner Locator</a><div class="clear"></div></li></ul></div><div style="height: 259px;" class="grid_divider_vertical"><div style="height: 129.5px;" class="top part"></div><div style="display: none;" class="middle part"></div><div style="height: 129.5px; background-position: -48px -15.5px;" class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/information/">Information Center</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/aboutus/">About Rackspace</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/newsroom/">Rackspace Newsroom</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/contactus/" rel="nofollow">Contact Information</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/aboutus/">Leadership</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/hosting101/">Hosting 101</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/events/" rel="nofollow">Programs &amp; Events</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/startup/">Rackspace Startup Program</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/information/events/rackgivesback/" rel="nofollow">Rack Gives Back</a><div class="clear"></div></li><li class="sub"><div class="arrow"></div><a href="http://www.rackspace.com/information/events/briefingprogram/">Briefing Program</a><div class="clear"></div></li><li class=""><a href="http://www.rackertalent.com/">Careers</a><div class="clear"></div></li><li class=""><a href="http://ir.rackspace.com/phoenix.zhtml?c=221673&amp;p=irol-irhome">Investors</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/legal/">Legal</a><div class="clear"></div></li></ul></div><div style="height: 259px;" class="grid_divider_vertical"><div style="height: 129.5px;" class="top part"></div><div style="display: none;" class="middle part"></div><div style="height: 129.5px; background-position: -48px -15.5px;" class="bottom part"></div></div><div class="navigation_2"><ul class="navigation"><li class="heading-link"><a href="http://www.rackspace.com/blogs/">Blog Community</a><div class="arrow"></div><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/blog/">The Official Rackspace Blog</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/cloud/blog/">Rackspace Cloud Blog</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/apps/blog/">Email &amp; Apps Blog</a><div class="clear"></div></li><li class=""><a href="http://www.rackertalent.com/">Racker Talent</a><div class="clear"></div></li><li class=""><a href="http://www.building43.com/">Building 43</a><div class="clear"></div></li><li class=""><a href="http://www.rackspace.com/information/newsroom/">Rackspace Newsroom</a><div class="clear"></div></li><li class="heading-link"><a href="http://www.rackspace.com/knowledge_center/">Knowledge Center</a><div class="arrow"></div><div class="clear"></div></li></ul></div><div class="clear"></div></div></div></div></div>
+
+						
+						
+		</div>
+		
+		<div id="flag-careers-wrap" onclick="getURL('http://www.rackertalent.com')"></div>
+		
+	</div>
+		<div id="content-wrap">
+		<div class="container_12">
+			  <div class="region region-mainsearch">
+    <div id="block-search-form" class="block block-search">
+
+    
+  <div class="content">
+    <form action="/knowledge_center/index.php/How_can_I_access_my_FTP_content_with_SSHFS" method="post" id="search-block-form" accept-charset="UTF-8"><div><a class="logo" href="http://www.rackspace.com/knowledge_center/" style="position: absolute;"></a>
+<div class="container-inline">
+	<div id="mainsearch-wrap"><div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." id="edit-search-block-form--2" name="search_block_form" size="15" maxlength="128" class="form-text" type="text">
+</div>
+<fieldset class="collapsible collapsed form-wrapper collapse-processed" id="edit-advancedsearch"><legend><span class="fieldset-legend"><a class="fieldset-title" href="#"><span class="fieldset-legend-prefix element-invisible">Show</span> Advanced Search</a><span class="summary"></span></span></legend><div class="fieldset-wrapper"><fieldset class="form-wrapper" id="edit-content-type"><div class="fieldset-wrapper"><b>Filter by Article Type</b><div class="form-item form-type-checkbox form-item-content-list-lc-article">
+ <input onclick='categorySelect("lc_article");' value="lc_article" id="edit-content-list-lc-article" name="content_list_lc_article" class="form-checkbox" type="checkbox">  <label class="option" for="edit-content-list-lc-article">Article </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-content-list-lc-podcast">
+ <input onclick='categorySelect("lc_podcast");' value="lc_podcast" id="edit-content-list-lc-podcast" name="content_list_lc_podcast" class="form-checkbox" type="checkbox">  <label class="option" for="edit-content-list-lc-podcast">Podcast </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-content-list-lc-video">
+ <input onclick='categorySelect("lc_video");' value="lc_video" id="edit-content-list-lc-video" name="content_list_lc_video" class="form-checkbox" type="checkbox">  <label class="option" for="edit-content-list-lc-video">Video </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-content-list-lc-webinars">
+ <input onclick='categorySelect("lc_webinars");' value="lc_webinars" id="edit-content-list-lc-webinars" name="content_list_lc_webinars" class="form-checkbox" type="checkbox">  <label class="option" for="edit-content-list-lc-webinars">Webinars </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-content-list-lc-whitepaper">
+ <input onclick='categorySelect("lc_whitepaper");' value="lc_whitepaper" id="edit-content-list-lc-whitepaper" name="content_list_lc_whitepaper" class="form-checkbox" type="checkbox">  <label class="option" for="edit-content-list-lc-whitepaper">Whitepaper </label>
+
+</div>
+</div></fieldset>
+<fieldset class="form-wrapper" id="edit-products"><div class="fieldset-wrapper"><div class="form-item form-type-checkboxes form-item-products-list">
+  <label for="edit-products-list">Filter by Product Categories<br> </label>
+ <div id="edit-products-list" class="form-checkboxes"><div class="form-item form-type-checkbox form-item-products-list-75">
+ <input id="edit-products-list-75" name="products_list[75]" value="75" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-75">Cloud Drive </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-products-list-70">
+ <input id="edit-products-list-70" name="products_list[70]" value="70" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-70">Cloud Files </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-products-list-69">
+ <input id="edit-products-list-69" name="products_list[69]" value="69" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-69">Cloud Servers </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-products-list-68">
+ <input id="edit-products-list-68" name="products_list[68]" value="68" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-68">Cloud Sites </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-products-list-74">
+ <input id="edit-products-list-74" name="products_list[74]" value="74" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-74">Exchange </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-products-list-76">
+ <input id="edit-products-list-76" name="products_list[76]" value="76" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-76">General Learning </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-products-list-71">
+ <input id="edit-products-list-71" name="products_list[71]" value="71" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-71">Managed Cloud </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-products-list-72">
+ <input id="edit-products-list-72" name="products_list[72]" value="72" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-72">Rackspace Email </label>
+
+</div>
+<div class="form-item form-type-checkbox form-item-products-list-73">
+ <input id="edit-products-list-73" name="products_list[73]" value="73" class="form-checkbox" type="checkbox">  <label class="option" for="edit-products-list-73">SharePoint </label>
+
+</div>
+</div>
+</div>
+</div></fieldset>
+<fieldset class="form-wrapper" id="edit-article-id-search"><div class="fieldset-wrapper"><div class="form-item form-type-checkbox form-item-articleId">
+ <input id="edit-articleid" name="articleId" value="1" class="form-checkbox" type="checkbox">  <label class="option" for="edit-articleid">Search by Article Id </label>
+
+</div>
+<br><b>Enter Article Id</b><br><div class="form-item form-type-textfield form-item-id-text">
+ <input id="edit-id-text" name="id-text" size="10" maxlength="128" class="form-text" type="text">
+</div>
+<br><div class="advancedShadow"></div></div></fieldset>
+</div></fieldset>
+<div class="form-actions form-wrapper" id="edit-actions--2"><input onclick="searchFormSubmit(); return false;" id="edit-submit--2" name="op" value="Search" class="form-submit" type="submit"></div><input name="form_build_id" value="form-hMQ127a28lhdHy9ezgTHQHFH7dZEo7FdyEfBT2ZHCLo" type="hidden">
+<input name="form_id" value="search_block_form" type="hidden">
+<br></div>
+</div></div></form>  </div>
+</div>
+  </div>
+	
+
+<div class="breadcrumbWrapper">
+	<div class="breadcrumb">
+		<a href="http://www.rackspace.com/knowledge_center">Knowledge Center</a> / Article / How can I access my FTP content with…	</div>
+</div>
+<div style="border-right: 1px solid rgb(196, 196, 196);" id="articleContent-wrap" class="column-1">
+	<div class="tabsWrapper">
+			</div>
+	  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="kc_sharethis"><script type="text/javascript">
+var addthis_pub		= "ejchiefs";
+var addthis_brand 	= "Rackspace";
+</script>
+
+<div class="shareThis">Share this on: </div>
+<div class="shareThisImage linkedin" onclick="return addthis_sendto('linkedin');"></div>
+<div class="shareThisImage facebook" onclick="return addthis_sendto('facebook');"></div>
+<div class="shareThisImage twitter" onclick="return addthis_sendto('twitter');"></div>
+<div class="clear"></div>
+
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/addthis.js"></script></div><div id="node-705" class="node node-lc-article clearfix" about="/knowledge_center/index.php/How_can_I_access_my_FTP_content_with_SSHFS" typeof="sioc:Item foaf:Document">
+
+<div id="nodeContent-wrap">
+	
+			
+		
+	<h2>How can I access my FTP content with SSHFS?</h2>
+	<div class="article-info">
+		by matt.wheeler on 16 March 2011 | 0 Comments
+	</div>
+		<div class="articleId">
+			Article Id: <a href="http://www.rackspace.com/knowledge_center/index.php/How_can_I_access_my_FTP_content_with_SSHFS">705</a> | <b>Cloud Sites</b> | Article		</div>
+		<br><br>
+	
+  <div class="content">
+     <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Although full ssh access is not available you can mount your ftp location in Linux using SSHFS. <em>*Windows/Mac users see footnote</em></p>
+<p> You will first need to install SSHFS. Here are some common methods for doing so:</p>
+<p>* For Debian:</p>
+<pre>apt-get install fuse-utils sshfs</pre><p>* For Ubuntu:</p>
+<pre>sudo apt-get install fuse-utils sshfs</pre><p>* For Fedora and Centos:</p>
+<pre>yum install fuse-utils sshfs</pre><p>* For Mandriva: urpmi:</p>
+<pre>urpmi fuse-utils sshfs</pre><p>You will then need to choose and make a directory to mount the ftp storage location to. We'll use /mnt/remote for our example:</p>
+<pre>sudo mkdir /mnt/remote
+sudo chown [system-user]:[your-group] /mnt/remote/</pre><p>Next you will add yourself to the fuse group:</p>
+<pre>sudo adduser [system-user] fuse</pre><p>Now you will connect and mount the ftp storage location:</p>
+<pre>sshfs ftp-user@ftp.domain.com: /mnt/remote/</pre><p>Note: 
+ftp.domain.com will be either ftp1.ftptoyoursite.com, 
+ftp2.ftptoyoursite.com or ftp.domain.com depending on how you connect to
+ ftp.</p>
+<p>Additionally you can specify a remote path to mount such as www.domain.com/web/content.</p>
+<pre>sshfs ftp-user@ftp.domain.com:www.domain.com/web/content/ /mnt/remote/</pre><p>You will now be asked to accept the key from our system and then for your ftp user password.</p>
+<p>Once mounted you can cd to your mounted directory and perform many 
+basic commands that do not require root access including but not limited
+ to:</p>
+<pre>tar     gzip     gunzip     zip     unzip     chmod</pre><p>You may
+ also want to update the /etc/fuse.conf file to include a line such as 
+below to ensure you do not lose connection while working:</p>
+<pre>ServerAliveInterval = 300</pre><p>Additional information may be found at these locations: <a href="http://www.linuxjournal.com/article/8904" title="http://www.linuxjournal.com/article/8904" class="external autonumber" rel="nofollow">[1]</a> <a href="http://apps.sourceforge.net/mediawiki/fuse/index.php?title=SshfsFaq" title="http://apps.sourceforge.net/mediawiki/fuse/index.php?title=SshfsFaq" class="external autonumber" rel="nofollow">[2]</a></p>
+<p> <strong>*For Windows and Mac users you can also use <a href="http://www.expandrive.com/" title="http://www.expandrive.com" class="external text" rel="nofollow">ExpanDrive</a> to map your FTP storage location as a local drive. Documentation on using this software can be found in their support pages: <a href="http://www.expandrive.com/support" title="http://www.expandrive.com/support" class="external autonumber" rel="nofollow">[3]</a></strong></p>
+</div></div></div>	
+				
+				<div class="legalNotice">
+			© 2011 Rackspace US, Inc.<br><br>
+			<span style="font-size: 10px; font-style: italic;">
+				Except where otherwise noted, content on this site is licensed under
+ a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported 
+License
+			</span>
+			
+			<br><br>
+			
+			<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img src="How_can_I_access_my_FTP_content_with_SSHFS_files/88x31.png"></a><br>
+			<a href="http://www.rackspace.com/knowledge_center/legal/">See license specifics and DISCLAIMER</a>
+			
+		</div>
+				
+  </div>
+</div>
+
+	<div class="tbd_jrd on_node" style="clear:both"></div>
+
+
+	<div class="node_comments">
+	  <div id="comments" class="comment-wrapper">
+  
+  
+      <h2 class="title comment-form">Add new comment</h2>
+    <form class="comment-form user-info-from-cookie user-info-from-cookie-processed" action="/knowledge_center/comment/reply/705" method="post" id="comment-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">Your name <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-name" name="name" size="30" maxlength="60" class="form-text required" type="text">
+</div>
+<div class="form-item form-type-textfield form-item-mail">
+  <label for="edit-mail">E-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-mail" name="mail" size="30" maxlength="64" class="form-text required" type="text">
+<div class="description">The content of this field is kept private and will not be shown publicly.</div>
+</div>
+<div class="form-item form-type-textfield form-item-homepage">
+  <label for="edit-homepage">Homepage </label>
+ <input id="edit-homepage" name="homepage" size="30" maxlength="255" class="form-text" type="text">
+</div>
+<div class="form-item form-type-textfield form-item-subject">
+  <label for="edit-subject">Subject </label>
+ <input id="edit-subject" name="subject" size="60" maxlength="64" class="form-text" type="text">
+</div>
+<div class="field-type-text-long field-name-comment-body field-widget-text-textarea form-wrapper" id="edit-comment-body"><div id="comment-body-add-more-wrapper"><div class="text-format-wrapper"><div class="form-item form-type-textarea form-item-comment-body-und-0-value">
+  <label for="edit-comment-body-und-0-value">Comment <span class="form-required" title="This field is required.">*</span></label>
+ <div class="form-textarea-wrapper"><textarea class="text-full form-textarea required" id="edit-comment-body-und-0-value" name="comment_body[und][0][value]" cols="60" rows="5"></textarea></div>
+</div>
+<fieldset class="filter-wrapper form-wrapper" id="edit-comment-body-und-0-format"><div class="fieldset-wrapper"><div class="filter-help form-wrapper" id="edit-comment-body-und-0-format-help"><p><a href="http://www.rackspace.com/knowledge_center/filter/tips">More information about text formats</a></p></div><div class="form-item form-type-select form-item-comment-body-und-0-format">
+  <label for="edit-comment-body-und-0-format--2">Text format </label>
+ <select class="filter-list wysiwyg form-select" id="edit-comment-body-und-0-format--2" name="comment_body[und][0][format]"><option value="filtered_html" selected="selected">Filtered HTML</option><option value="plain_text">Plain text</option></select>
+</div>
+<div class="filter-guidelines form-wrapper filter-guidelines-processed" id="edit-comment-body-und-0-format-guidelines"><div style="display: block;" class="filter-guidelines-item filter-guidelines-filtered_html"><h3 style="display: none;">Filtered HTML</h3><ul class="tips"><li>Web page addresses and e-mail addresses turn into links automatically.</li><li>Allowed
+ HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; 
+&lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; 
+&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</li><li>Lines and paragraphs break automatically.</li></ul></div><div style="display: none;" class="filter-guidelines-item filter-guidelines-plain_text"><h3 style="display: none;">Plain text</h3><ul class="tips"><li>No HTML tags allowed.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li><li>Lines and paragraphs break automatically.</li></ul></div></div></div></fieldset>
+</div>
+</div></div><input name="form_build_id" value="form-D7ULpwken2psHSC7904Hv7cA0WeiN-3ErJawxkCzCbk" type="hidden">
+<input name="form_id" value="comment_node_lc_article_form" type="hidden">
+<input class="mollom-session-id" name="mollom[session_id]" value="111205b594a1db7e16" type="hidden">
+<div class="form-item form-type-textfield form-item-mollom-captcha">
+  <label for="edit-mollom-captcha">Word verification <span class="form-required" title="This field is required.">*</span></label>
+ <span class="field-prefix"><span class="mollom-captcha-content mollom-image-captcha"><img typeof="foaf:Image" src="How_can_I_access_my_FTP_content_with_SSHFS_files/111205b594a1db7e16.png" alt="Type the characters you see in this picture."></span> (<a href="#" class="mollom-switch-captcha mollom-audio-captcha">verify using audio</a>)</span> <input autocomplete="off" id="edit-mollom-captcha" name="mollom[captcha]" size="10" maxlength="128" class="form-text required" type="text">
+<div class="description">Type the characters you see in the picture 
+above; if you can't read them, submit the form and a new image will be 
+generated. Not case sensitive.</div>
+</div>
+<div style="display: none;"><div class="form-item form-type-textfield form-item-mollom-homepage">
+ <input title="Homepage" autocomplete="off" id="edit-mollom-homepage" name="mollom[homepage]" size="60" maxlength="128" class="form-text" type="text">
+</div>
+</div><div class="form-actions form-wrapper" id="edit-actions"><input id="edit-submit" name="submit" value="Save" src="How_can_I_access_my_FTP_content_with_SSHFS_files/submit_button.png" class="form-submit" type="image"></div></div></form>  </div>
+	
+	</div>
+	
+</div>
+
+
+  </div>
+</div>
+  </div>
+	
+</div>
+
+<div id="rightsidebar-wrap" class="column-2">
+	  <div class="region region-rightsidebar">
+    <div id="block-contactblock-contactblock" class="block block-contactblock">
+
+    <h2>Contact Us</h2>
+  
+  <div class="content">
+    <form class="user-info-from-cookie contact-form user-info-from-cookie-processed" action="/knowledge_center/index.php/How_can_I_access_my_FTP_content_with_SSHFS" method="post" id="contact-site-form" accept-charset="UTF-8"><div><fieldset class="form-wrapper"><legend><span class="fieldset-legend">Let us know what you think about<br> our new Knowledge Center.</span></legend><div class="fieldset-wrapper"></div></fieldset>
+<div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name--2">Your name <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-name--2" name="name" size="60" maxlength="255" class="form-text required" type="text">
+</div>
+<div class="form-item form-type-textfield form-item-mail">
+  <label for="edit-mail--2">Your e-mail address <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-mail--2" name="mail" size="60" maxlength="255" class="form-text required" type="text">
+</div>
+<div class="form-item form-type-textfield form-item-subject">
+  <label for="edit-subject--2">Subject <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-subject--2" name="subject" size="60" maxlength="255" class="form-text required" type="text">
+</div>
+<div class="form-item form-type-textarea form-item-message">
+  <label for="edit-message">Message <span class="form-required" title="This field is required.">*</span></label>
+ <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea"><textarea id="edit-message" name="message" cols="60" rows="5" class="form-textarea required"></textarea><div class="grippie"></div></div>
+</div>
+<input name="form_build_id" value="form-zbNxk89fZJ5zs4Q26b7uoCMUmOvD8Yn804bOWjgjqsk" type="hidden">
+<input name="form_id" value="contact_site_form" type="hidden">
+<input src="How_can_I_access_my_FTP_content_with_SSHFS_files/submit_button_002.png" class="form-submit" type="image"><div class="form-actions form-wrapper" id="edit-actions--3"><input id="edit-submit--3" name="op" value="Send message" class="form-submit" type="submit"></div></div></form>  </div>
+</div>
+<div id="block-lc-blocks-lc-related-searches" class="block block-lc-blocks">
+
+    <h2>Related Articles</h2>
+  
+  <div class="content">
+    <ul><li class="block_article"><a href="http://www.rackspace.com/knowledge_center/node/127">Installing CakePHP on Cloud Sites</a></li><li class="block_article"><a href="http://www.rackspace.com/knowledge_center/node/705">How can I access my FTP content with SSHFS?</a></li><li class="block_article"><a href="http://www.rackspace.com/knowledge_center/node/83">Cloud Servers - Frequently Asked Questions</a></li><li class="block_article"><a href="http://www.rackspace.com/knowledge_center/node/2075">Rackspace Cloud DNS - FAQ</a></li><li class="block_article"><a href="http://www.rackspace.com/knowledge_center/node/735">Rackspace Cloud Sites First 48, 6-4 - FTP/SSHFS/FTP Clients</a></li><li class="block_article"><a href="http://www.rackspace.com/knowledge_center/node/254">Cloud Sites Billing FAQ</a></li></ul>  </div>
+</div>
+  </div>
+</div>
+
+<div style="clear:both"></div>		</div>
+	<!-- </div> -->
+
+<!-- Google Code for Partner Program signup completion Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = "1040066332";
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "otg6COadigIQnM747wM";
+var google_conversion_value = 0;
+/* ]]> */
+</script>
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/conversion.js">
+</script><img src="How_can_I_access_my_FTP_content_with_SSHFS_files/a_002.gif" border="0" height="1" width="1">
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1040066332/?label=otg6COadigIQnM747wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript><div style="display:none">
+<script type="text/javascript">
+var ebRand = Math.random()+ ' ';
+ebRand = ebRand * 1000000;
+//<![CDATA[
+document.write('<scr'+'ipt src="https://bs.serving-sys.com/BurstingPipe/ActivityServer.bs?cn=as&amp;ActivityID=97091&amp;rnd=' + ebRand + '"></scr' + 'ipt>');
+//]]>
+</script><script src="How_can_I_access_my_FTP_content_with_SSHFS_files/ActivityServer.html"></script><img src="How_can_I_access_my_FTP_content_with_SSHFS_files/a.gif" height="0" width="0">
+
+<noscript>
+<img src="https://bs.serving-sys.com/BurstingPipe/ActivityServer.bs?cn=as&amp;ActivityID=97091&amp;ns=1" width="1" height="1" style="border:0" alt="" />
+</noscript>
+</div>	
+	<div id="footer-wrap">
+
+				
+			<div id="subfooter-wrap">
+	
+				<div class="subfooters">
+					
+					<div class="container_12">
+			
+						<div class="grid_2"><div class="subfooter cloudprivateedition" onclick="getURL('/cloud/private_edition/')"></div></div>
+<div class="grid_4">
+	<h4 class="subfooter"><a href="http://www.rackspace.com/cloud/private_edition/" class="hidden">Cloud Private Edition</a></h4>
+	<p class="subfooter">Build your own OpenStack™ powered private cloud with technology, expertise, training &amp;
+	support from Rackspace.</p>
+	<a href="http://www.rackspace.com/cloud/private_edition/" class="subfooter">Learn More</a></div>						<div class="grid_2"><div class="subfooter gartner" onclick="getURLNewWindow('http://c1776742.cdn.cloudfiles.rackspacecloud.com/downloads/pdfs/GartnerMagicQuadrant.pdf')" title="GartnerMagicQuadrant.pdf"></div></div>
+<div class="grid_4">
+	<h4 class="subfooter"><a href="http://c1776742.cdn.cloudfiles.rackspacecloud.com/downloads/pdfs/GartnerMagicQuadrant.pdf" title="GartnerMagicQuadrant.pdf" class="hidden" target="_blank">Gartner's Magic Quadrant</a></h4>
+	<p class="subfooter">Rackspace is positioned as a leader in Gartner's Magic Quadrant for Cloud Infrastructure as a Service and Web Hosting.</p>
+	<a href="http://c1776742.cdn.cloudfiles.rackspacecloud.com/downloads/pdfs/GartnerMagicQuadrant.pdf" title="GartnerMagicQuadrant.pdf" class="subfooter" target="_blank">Download PDF</a></div>
+						
+						<div class="clear"></div>
+						
+					</div>
+					
+				</div>
+			
+			</div>
+		
+			
+		<div id="fatfooter-wrap">
+		
+			<div class="container_12">
+			
+			<div class="fatfooter_1 push_0"><div><a href="http://www.rackspace.com/">Rackspace</a></div><ul><li><a href="http://www.rackspace.com/information/aboutus/" class="footer">About Rackspace Hosting</a></li><li><a href="http://www.rackspace.com/whyrackspace/support/" class="footer">Fanatical Support®</a></li><li><a href="http://www.rackspace.com/hosting_solutions/" class="footer">Hosting Solutions</a></li><li><a href="http://www.rackspace.com/information/hosting101/" class="footer">Web Hosting 101</a></li><li><a href="http://www.rackspace.com/partners/" class="footer">Hosting Partner Programs</a></li><li><a href="http://www.rackspace.com/cloudbuilders/openstack/" class="footer">OpenStack™</a></li></ul></div><div class="fatfooter_1 push_1"><div><a href="http://www.rackspace.com/managed_hosting/">Managed Hosting</a></div><ul><li><a href="http://www.rackspace.com/managed_hosting/configurations/" class="footer">Managed Configurations</a></li><li><a href="http://www.rackspace.com/managed_hosting/managed_colocation/" class="footer">Managed Colocation Servers</a></li><li><a href="http://www.rackspace.com/managed_hosting/dedicated_servers/" class="footer">Dedicated Servers</a></li><li><a href="http://www.rackspace.com/managed_hosting/support/customers/" class="footer">Managed Customers</a></li><li><a href="https://my.rackspace.com/" class="footer" rel="nofollow">MyRackspace® Portal</a></li></ul></div><div class="fatfooter_1 push_2"><div><a href="http://www.rackspace.com/cloud/">Cloud Hosting</a></div><ul><li><a href="http://www.rackspace.com/cloud/cloud_hosting_products/servers/" class="footer">Cloud Servers™</a></li><li><a href="http://www.rackspace.com/cloud/cloud_hosting_products/loadbalancers/" class="footer">Cloud Load Balancers</a></li><li><a href="http://www.rackspace.com/cloud/cloud_hosting_products/files/" class="footer">Cloud Files™</a></li><li><a href="http://www.rackspace.com/cloud/cloud_hosting_products/sites/" class="footer">Cloud Sites™</a></li><li><a href="http://www.rackspace.com/cloud/cloud_hosting_demos/" class="footer">Cloud Hosting Demos</a></li><li><a href="https://manage.rackspacecloud.com/pages/Login.jsp" class="footer">Cloud Customer Portal</a></li></ul></div><div class="fatfooter_1 push_3"><div><a href="http://www.rackspace.com/apps/">Email &amp; Apps</a></div><ul><li><a href="http://www.rackspace.com/apps/email_hosting/" class="footer">Rackspace Email Hosting</a></li><li><a href="http://www.rackspace.com/apps/email_hosting/exchange_hosting/" class="footer">Microsoft Hosted Exchange</a></li><li><a href="http://www.rackspace.com/apps/email_hosting/compare/" class="footer">Compare Hosted Products</a></li><li><a href="http://www.rackspace.com/apps/email_hosting/email_archiving/" class="footer">Email Archiving</a></li><li><a href="http://apps.rackspace.com/" class="footer">Customer Log-in</a></li></ul></div><div style="height: 194px;" class="grid_divider_vertical push_3"><div style="height: 97px;" class="top part"></div><div style="display: none;" class="middle part"></div><div style="height: 97px; background-position: -48px -48px;" class="bottom part"></div></div><div class="fatfooter_1 push_4"><div><a href="http://www.rackspace.com/information/contactus/" rel="nofollow">Contact Us</a></div><div><a href=""></a></div><div class="column_1"><div class="footerIcon salesIcon"></div> <span style="color:#4F81A6;">Sales</span></div><div class="column_2">1-800-961-2888</div><div class="clear"></div><div class="column_1"><a href="http://www.rackspace.com/support/"><div class="footerIcon supportIcon"></div> <span style="position:relative; color:#4F81A6;">Support</span></a></div><div class="column_2">1-800-961-4454</div><div class="clear"></div><br><div><a href="http://www.rackspace.com/information/contactus/" rel="nofollow">Connect With Us</a></div><div><a href=""></a></div><div class="social linkedin" onclick='getURLNewWindow("http://www.linkedin.com/company/rackspace-hosting/")'></div><div class="social facebook" onclick='getURLNewWindow("http://www.facebook.com/rackspacehost")'></div><div class="social twitter" onclick='getURLNewWindow("http://twitter.com/rackspace")'></div><div class="social linktous" onclick='getURLNewWindow("/information/links/")'></div><div class="social email" onclick='getURLNewWindow("/forms/contactsales/")'></div><div class="clear"></div></div><div class="clear"></div>			
+			</div>
+			
+			<div id="rackerpowered"></div>
+	
+		</div>
+	
+	</div>
+
+</div>
+
+<div id="basement-wrap" class="basement-wrap-nosnap">
+
+	©2011 Rackspace, US Inc.
+	
+	<span class="footerlink"><a href="http://www.rackspace.com/information/aboutus/" class="basement">About Rackspace</a></span> | <span class="footerlink"><a href="http://www.rackspace.com/whyrackspace/support/" class="basement">Fanatical Support®</a></span> | <span class="footerlink"><a href="http://www.rackspace.com/hosting_solutions/" class="basement">Hosting Solutions</a></span> | <span class="footerlink"><a href="http://ir.rackspace.com/" class="basement">Investors</a></span> | <span class="footerlink"><a href="http://www.rackertalent.com/" class="basement">Careers</a></span> | <span class="footerlink"><a href="http://www.rackspace.com/information/legal/privacystatement.php" class="basement" rel="nofollow">Privacy Statement</a></span> | <span class="footerlink"><a href="http://www.rackspace.com/information/legal/websiteterms.php" class="basement">Website Terms</a></span> | <span class="footerlink"><a href="http://www.rackspace.com/sitemap/" class="basement" rel="nofollow">Sitemap</a></span>	
+</div>
+
+
+<script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/a"></script><script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/a.js"></script><script language="javascript1.2" src="How_can_I_access_my_FTP_content_with_SSHFS_files/90378805.js"></script>
+	
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="How_can_I_access_my_FTP_content_with_SSHFS_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12097561-1");
+pageTracker._trackPageview();
+pageTracker._trackPageLoadTime();
+} catch(err) {}</script>
+<script type="text/javascript">
+  document.write('<scr'+'ipt type="text/javascript" src="' +                 
+                 document.location.protocol +
+                 '//munchkin.marketo.net/munchkin.js"><\/scr'+'ipt>');
+</script><script type="text/javascript" src="How_can_I_access_my_FTP_content_with_SSHFS_files/munchkin.js"></script>
+<script>mktoMunchkin("045-QRG-025");</script>
+
+
+</div></body></html>
